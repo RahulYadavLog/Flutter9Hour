@@ -14,7 +14,7 @@ final String name="Rahul";
       body:
      Center(child: 
     Container(child: 
-    Text("$day Day flutter cource  $name"),
+    Text("$day Day flutter dsg cource  $name"),
     ),
 
     ),
