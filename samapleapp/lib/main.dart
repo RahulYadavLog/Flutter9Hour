@@ -3,6 +3,7 @@ import 'package:samapleapp/pages/home_page.dart';
 import 'package:samapleapp/pages/login_pages.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:samapleapp/utils/route_s.dart';
+import 'package:samapleapp/widgets/themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,10 +19,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner:false ,
       // home:HomePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.deepPurple,
-      fontFamily: GoogleFonts.lato().fontFamily,
-      primaryTextTheme: GoogleFonts.latoTextTheme()),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      theme: MyThemes.lightTheme(context),
+      darkTheme: MyThemes.darkTheme(context),
       initialRoute: MyRoutes.homeRoutes,
       routes: {
         MyRoutes.loginRoutes:(context)=>LoginPage(),
