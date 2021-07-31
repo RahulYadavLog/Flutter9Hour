@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:samapleapp/pages/home_page.dart';
 import 'package:samapleapp/pages/login_pages.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:samapleapp/utils/route_s.dart';
 import 'package:samapleapp/widgets/themes.dart';
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bringVegitable(thaila: true);
+    // bringVegitable(thaila: true);
     return MaterialApp(
       debugShowCheckedModeBanner:false ,
       // home:HomePage(),
@@ -30,8 +30,8 @@ class MyApp extends StatelessWidget {
 
   }
 
-  bringVegitable({@required bool thaila=false,int rupee=100})
-  {
+  // bringVegitable(required bool thaila=false,int rupee=100)
+  // {
 
-  }
+  // }
 }
