@@ -23,26 +23,31 @@ final String name="Rahul";
   }
   loadData() async
   {
+    
    var catlogJson=await rootBundle.loadString("assets/files/catlog.json");
    var decodData=jsonDecode(catlogJson);
    var productData=decodData["products"];
-   print(catlogJson);
+   CatlogModel.items=List.from(productData).map<Item>((item) => Item.fromMap(item)).toList();
+   setState(() {
+     
+   });
   }
 
   @override
   Widget build(BuildContext context) {
-    final dummyList=List.generate(50, (index) => CatlogModel.items[0]);
+    // final dummyList=List.generate(50, (index) => CatlogModel.items[0]);
     return Scaffold(
       appBar: AppBar(
         title: Text("Catlog App"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: ListView.builder(
-          itemCount: dummyList.length,
+        child:(CatlogModel.items.isEmpty)?Center (child: CircularProgressIndicator(),):
+        ListView.builder(
+          itemCount: CatlogModel.items.length,
           itemBuilder: (context,index)
           {
-            return ItemWidget(item: dummyList[index],);
+            return ItemWidget(item: CatlogModel.items[index],);
           },),
       ),
     drawer: MyDrawer(),
