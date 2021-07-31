@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
+import 'package:samapleapp/utils/route_s.dart';
 import 'package:samapleapp/widgets/home_wedgets/catalog_header.dart';
 import 'package:samapleapp/widgets/home_wedgets/catalog_list.dart';
 import "package:velocity_x/velocity_x.dart";
@@ -41,13 +43,17 @@ final String name="Rahul";
     // final dummyList=List.generate(50, (index) => CatlogModel.items[0]);
     return Scaffold(
       backgroundColor: MyThemes.creamColor,
+      floatingActionButton: FloatingActionButton(onPressed: (){Navigator.pushNamed(context, MyRoutes.cartRoutes);},
+      child: Icon(CupertinoIcons.cart),
+      backgroundColor: MyThemes.darkBluishColor,
+      ),
       body:SafeArea(
         child: Container(
           padding: Vx.m32,
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [ CatlogHeader() ,
-           ( CatalogList().expand()
+           ( CatalogList().py16().expand()
             )
           
             

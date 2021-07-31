@@ -47,7 +47,8 @@ final Item catalog;
             buttonPadding: EdgeInsets.zero,
             children: [
               "\$${catalog.price}".text.bold.xl.make(),
-              ElevatedButton(onPressed:() {}, child: "Buy".text.make(),
+              ElevatedButton(onPressed:() {Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeDetailsPage(catalog: catalog)));},
+               child: "Add to cart".text.make(),
               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyThemes.darkBluishColor),
               shape: MaterialStateProperty.all(StadiumBorder())),
               

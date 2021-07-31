@@ -14,7 +14,9 @@ final Item catalog;
       bottom: false,
       top: false,
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+        ),
         backgroundColor: MyThemes.creamColor,
         bottomNavigationBar:   Container(
           color: Colors.white,
@@ -23,11 +25,11 @@ final Item catalog;
               buttonPadding: EdgeInsets.zero,
               children: [
                 "\$${catalog.price}".text.bold.xl4.red800.make(),
-                ElevatedButton(onPressed:() {}, child: "Buy".text.make(),
+                ElevatedButton(onPressed:() {}, child: "Add to cart".text.make(),
                 style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyThemes.darkBluishColor),
                 shape: MaterialStateProperty.all(StadiumBorder())),
                 
-                ).wh(100, 50)
+                ).wh(120, 50)
               ],
             ).p32(),
         ),
@@ -42,10 +44,13 @@ final Item catalog;
               color: Colors.white,
               width: context.screenWidth,
               child: Column(
-                children: [catalog.name.text.xl4.color(MyThemes.darkBluishColor).xl.bold.make(),
-          catalog.desc.text.make(),
-          10.heightBox,],
-              ).py64(),
+                children: [catalog.name.text.xl4.color(MyThemes.darkBluishColor).bold.make(),
+          catalog.desc.text.xl.make(),
+          10.heightBox,
+          "A framework that gives you all of the building blocks you need to build bespoke designs without any annoying nested styles you have to fight to wrap.".text
+          .make().p16()
+          ],
+              ).py24(),
             ),
           ))
           ],
