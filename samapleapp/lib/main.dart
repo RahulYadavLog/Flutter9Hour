@@ -28,7 +28,7 @@ themeMode: ThemeMode.dark,
       theme: MyThemes.darkTheme(context),
       darkTheme: MyThemes.darkTheme(context),
 
-      initialRoute: MyRoutes.loginRoutes,
+      initialRoute: MyRoutes.homeRoutes,
       routes: {
         MyRoutes.loginRoutes:(context)=>LoginPage(),
         MyRoutes.homeRoutes:(context)=> HomePage(),
