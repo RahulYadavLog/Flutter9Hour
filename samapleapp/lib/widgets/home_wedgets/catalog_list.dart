@@ -39,7 +39,7 @@ final Item catalog;
        crossAxisAlignment:CrossAxisAlignment.start,
        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          catalog.name.text.lg.color(MyThemes.darkBluishColor).bold.make(),
+          catalog.name.text.lg.color(context.accentColor).bold.make(),
           catalog.desc.text.make(),
           10.heightBox,
           ButtonBar(
@@ -49,7 +49,7 @@ final Item catalog;
               "\$${catalog.price}".text.bold.xl.make(),
               ElevatedButton(onPressed:() {Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeDetailsPage(catalog: catalog)));},
                child: "Add to cart".text.make(),
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyThemes.darkBluishColor),
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
               shape: MaterialStateProperty.all(StadiumBorder())),
               
               )
@@ -57,7 +57,7 @@ final Item catalog;
           ).pOnly(right: 8.0)
         ],
       ))],)
-    ).white.rounded.square(150).make().py16();
+    ).color(context.cardColor).rounded.square(150).make().py16();
     
   }
 }

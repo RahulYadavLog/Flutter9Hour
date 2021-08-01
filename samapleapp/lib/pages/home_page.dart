@@ -42,10 +42,10 @@ final String name="Rahul";
   Widget build(BuildContext context) {
     // final dummyList=List.generate(50, (index) => CatlogModel.items[0]);
     return Scaffold(
-      backgroundColor: MyThemes.creamColor,
+      backgroundColor: context.canvasColor,
       floatingActionButton: FloatingActionButton(onPressed: (){Navigator.pushNamed(context, MyRoutes.cartRoutes);},
-      child: Icon(CupertinoIcons.cart),
-      backgroundColor: MyThemes.darkBluishColor,
+      child: Icon(CupertinoIcons.cart,color: Colors.white,),
+      backgroundColor:context.theme.buttonColor,
       ),
       body:SafeArea(
         child: Container(
