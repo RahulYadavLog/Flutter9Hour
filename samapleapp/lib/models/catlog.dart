@@ -2,8 +2,8 @@ import 'dart:convert';
 
 class CatlogModel{
 static List<Item> items = [];
-static  Item getById(int id)=>items.firstWhere((element) => element.id==id,orElse: null);
-static  Item getByPos(int position)=>items[position])
+  Item getById(int id)=>items.firstWhere((element) => element.id==id,orElse: null);
+  Item getByPos(int position)=>items[position];
 }
 
 class Item {
