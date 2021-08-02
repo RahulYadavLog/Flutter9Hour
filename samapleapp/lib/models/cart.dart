@@ -1,9 +1,9 @@
 import 'package:samapleapp/models/catlog.dart';
 class CartModel{
 
-  // static final cartModel=CartModel._internal();
-  // CartModel._internal();
-  // factory CartModel()=>cartModel;
+  static final cartModel=CartModel._internal();
+  CartModel._internal();
+  factory CartModel()=>cartModel;
   
 
   late CatlogModel _catalog;
@@ -11,7 +11,10 @@ class CartModel{
   CatlogModel get catalog=>_catalog;
   set catalog(CatlogModel newCatalog)
   {
+    assert(newCatalog!=null);
+    
     _catalog=newCatalog;
+
   }
   List<Item> get items=>_itemId.map((id) => _catalog.getById(id)).toList();
   num get totalPrice=>items.fold(0, (total, current) => total+current.price);

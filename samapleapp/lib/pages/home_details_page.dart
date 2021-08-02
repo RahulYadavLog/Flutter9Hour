@@ -1,4 +1,5 @@
 import 'package:samapleapp/models/catlog.dart';
+import 'package:samapleapp/widgets/home_wedgets/add_to_cart.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:flutter/material.dart';
 
@@ -24,11 +25,7 @@ final Item catalog;
               buttonPadding: EdgeInsets.zero,
               children: [
                 "\$${catalog.price}".text.bold.xl4.red800.make(),
-                ElevatedButton(onPressed:() {}, child: "Add to cart".text.make(),
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
-                shape: MaterialStateProperty.all(StadiumBorder())),
-                
-                ).wh(120, 50)
+               AddToCart(catalog: catalog).wh(120, 50)
               ],
             ).p32(),
         ),

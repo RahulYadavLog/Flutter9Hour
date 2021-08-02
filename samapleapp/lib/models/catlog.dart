@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 class CatlogModel{
-    // static final catModel=CatlogModel._internal();
-    // CatlogModel._internal();
-    // factory CatlogModel()=>catModel;
+    static final catModel=CatlogModel._internal();
+    CatlogModel._internal();
+    factory CatlogModel()=>catModel;
 
 
 static List<Item> items = [];
