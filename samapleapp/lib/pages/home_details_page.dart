@@ -24,11 +24,7 @@ final Item catalog;
               buttonPadding: EdgeInsets.zero,
               children: [
                 "\$${catalog.price}".text.bold.xl4.red800.make(),
-                ElevatedButton(onPressed:() {}, child: "Add to cart".text.make(),
-                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
-                shape: MaterialStateProperty.all(StadiumBorder())),
-                
-                ).wh(120, 50)
+              .wh(120, 50)
               ],
             ).p32(),
         ),
